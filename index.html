@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Alpha | GitHub Presentation</title>
+    <title>Danielson Sousa | Tech Lead & Software Architect</title>
     
     <!-- Google Fonts: Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
         }
 
         .glass-card {
-            @apply bg-card border border-white/5 backdrop-blur-xl transition-all duration-500;
+            @apply bg-card border border-white/5 backdrop-blur-xl transition-all duration-500 overflow-hidden;
         }
 
         .glass-card:hover {
@@ -61,96 +61,163 @@
             width: 120%;
             height: 120%;
             background: 
-                radial-gradient(circle at 20% 20%, oklch(65% 0.2 260 / 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, oklch(70% 0.2 310 / 0.05) 0%, transparent 40%);
+                radial-gradient(circle at 10% 10%, oklch(65% 0.2 260 / 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, oklch(70% 0.2 310 / 0.08) 0%, transparent 40%);
             z-index: -1;
+        }
+
+        .skill-badge {
+            @apply px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] font-semibold text-white/70 hover:bg-primary/20 hover:border-primary/40 transition-all cursor-default uppercase tracking-wider;
         }
     </style>
 </head>
-<body class="p-4 md:p-8 min-h-screen flex items-center justify-center font-sans">
+<body class="p-4 md:p-12 min-h-screen flex flex-col items-center font-sans">
     
     <div class="bg-glow"></div>
 
-    <main class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+    <!-- Main Bento Grid -->
+    <main class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
         
-        <!-- Bio Section -->
-        <section class="lg:col-span-4 md:col-span-full glass-card rounded-custom p-8 flex flex-col md:flex-row items-center gap-8 group">
-            <div class="relative">
-                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-tr from-primary to-secondary p-1 animate-floating shadow-2xl">
-                    <img src="./avatar.png" alt="Profile" class="w-full h-full rounded-full bg-bg object-cover">
+        <!-- Bio / Profile -->
+        <section class="lg:col-span-4 md:col-span-full glass-card rounded-custom p-8 flex flex-col md:flex-row items-center gap-10">
+            <div class="relative shrink-0">
+                <div class="w-32 h-32 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-primary to-secondary p-1 animate-floating">
+                    <img src="./avatar.png" alt="Danielson Sousa" class="w-full h-full rounded-full bg-bg object-cover">
                 </div>
-                <div class="absolute -bottom-2 -right-2 bg-accent px-3 py-1 rounded-full text-[10px] font-bold text-bg tracking-wider animate-pulse border-2 border-bg">
-                    ONLINE
+                <div class="absolute -bottom-2 -right-2 bg-accent px-4 py-1.5 rounded-full text-[10px] font-black text-bg tracking-widest border-2 border-bg shadow-xl">
+                    SENIOR +15Y
                 </div>
             </div>
-            <div class="text-center md:text-left flex-1">
-                <h1 class="font-display text-4xl md:text-5xl font-extrabold mb-2 bg-gradient-to-r from-primary via-secondary to-white bg-clip-text text-transparent">
-                    Frontend Master
+            <div class="text-center md:text-left">
+                <h1 class="font-display text-4xl md:text-6xl font-black mb-2 tracking-tight bg-gradient-to-r from-white via-primary to-secondary bg-clip-text text-transparent">
+                    Danielson Sousa
                 </h1>
-                <p class="text-xl md:text-2xl font-medium text-white/80 mb-4 font-display">
-                    Construindo o futuro com pixels e código.
+                <p class="text-xl md:text-2xl font-bold text-white/90 mb-4 font-display">
+                    Tech Lead & Software Architect
                 </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-white/60">
-                    <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> Brasil, Planeta Terra</span>
-                    <span class="flex items-center gap-1"><i data-lucide="code-2" class="w-4 h-4"></i> Open Source Lover</span>
+                <p class="text-white/60 leading-relaxed max-w-2xl mb-6 text-sm md:text-base">
+                    Especialista focado em soluções de alta complexidade e escalabilidade. Referência em <span class="text-primary font-bold">System Design (DDD, CQRS)</span> e princípios SOLID. Atualmente liderando arquiteturas na Vicunha Têxtil.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <span class="flex items-center gap-2 text-xs text-white/40"><i data-lucide="map-pin" class="w-4 h-4 text-primary"></i> Rio Grande do Sul, Brasil</span>
+                    <span class="flex items-center gap-2 text-xs text-white/40"><i data-lucide="mail" class="w-4 h-4 text-primary"></i> nielson266@gmail.com</span>
                 </div>
             </div>
         </section>
 
-        <!-- Social Grid -->
-        <section class="lg:col-span-2 md:col-span-2 glass-card rounded-custom p-6 grid grid-cols-2 gap-4">
-            <a href="#" class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 hover:bg-primary/20 transition-all border border-white/5 hover:border-primary/40 group">
-                <i data-lucide="github" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white">Github</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 hover:bg-blue-500/20 transition-all border border-white/5 hover:border-blue-500/40 group">
-                <i data-lucide="linkedin" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white">LinkedIn</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 hover:bg-purple-500/20 transition-all border border-white/5 hover:border-purple-500/40 group">
-                <i data-lucide="terminal" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white">Stack</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/5 hover:bg-accent/20 transition-all border border-white/5 hover:border-accent/40 group">
-                <i data-lucide="mail" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white">Email</span>
-            </a>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="lg:col-span-3 md:col-span-2 glass-card rounded-custom p-8">
-            <h3 class="font-display text-xl font-bold mb-6 flex items-center gap-2">
-                <span class="w-2 h-2 bg-primary rounded-full"></span> Hard Skills
+        <!-- Dynamic Social Links -->
+        <section class="lg:col-span-2 md:col-span-2 glass-card rounded-custom p-8 flex flex-col justify-between">
+            <h3 class="font-display text-lg font-bold mb-6 flex items-center gap-2">
+                Conecte-se <i data-lucide="share-2" class="w-4 h-4 text-secondary"></i>
             </h3>
+            <div class="grid grid-cols-2 gap-4">
+                <a href="#" class="flex flex-col items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-primary/10 transition-all group">
+                    <i data-lucide="github" class="w-7 h-7 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[9px] font-black uppercase tracking-tighter">Github</span>
+                </a>
+                <a href="#" class="flex flex-col items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-blue-500/10 transition-all group">
+                    <i data-lucide="linkedin" class="w-7 h-7 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[9px] font-black uppercase tracking-tighter">LinkedIn</span>
+                </a>
+            </div>
+            <button class="mt-6 w-full py-4 bg-white text-bg font-black rounded-xl hover:bg-primary hover:text-white transition-all transform active:scale-95 flex items-center justify-center gap-2 text-sm uppercase italic">
+                Download CV <i data-lucide="download" class="w-4 h-4"></i>
+            </button>
+        </section>
+
+        <!-- Current Focus (Vicunha) -->
+        <section class="lg:col-span-3 md:col-span-2 glass-card rounded-custom p-8 group">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <span class="text-[10px] font-black text-primary bg-primary/10 px-2 py-1 rounded mb-2 inline-block">EXPERIÊNCIA ATUAL</span>
+                    <h3 class="font-display text-2xl font-bold">Vicunha Têxtil</h3>
+                </div>
+                <i data-lucide="briefcase" class="w-8 h-8 text-white/10 group-hover:text-primary transition-colors"></i>
+            </div>
+            <p class="text-sm font-bold text-white/80 mb-2 italic">Tech Lead & Arquiteto Full-Stack</p>
+            <p class="text-xs text-white/50 mb-4 leading-relaxed">
+                Liderança técnica na migração de ecossistemas legados para arquiteturas modernas (.NET 8, Angular 18/19, RabbitMQ, Kubernetes).
+            </p>
             <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/40 transition-all cursor-default">React v19</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/40 transition-all cursor-default">Next.js 15</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm font-medium hover:bg-secondary/20 hover:border-secondary/40 transition-all cursor-default">Tailwind v4</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/40 transition-all cursor-default">Modern CSS</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm font-medium hover:bg-accent/20 hover:border-accent/40 transition-all cursor-default">Performance</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-all cursor-default">Figma API</span>
+                <span class="skill-badge">.NET 8</span>
+                <span class="skill-badge">K8S</span>
+                <span class="skill-badge">RabbitMQ</span>
+                <span class="skill-badge">AWS</span>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="lg:col-span-3 md:col-span-2 glass-card rounded-custom p-8 relative overflow-hidden group">
-            <h3 class="font-display text-xl font-bold mb-6">GitHub Stats</h3>
-            <div class="grid grid-cols-2 gap-4 relative z-10">
-                <div class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-primary/5 transition-colors">
-                    <span class="text-2xl font-display font-black text-primary">1.2k</span>
-                    <p class="text-[10px] text-white/40 uppercase tracking-widest mt-1">Stars Reached</p>
+        <!-- Core Stack Categories -->
+        <section class="lg:col-span-3 md:col-span-2 glass-card rounded-custom p-8">
+            <h3 class="font-display text-xl font-bold mb-6">Stack Tecnológica</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="text-[10px] font-black text-white/30 uppercase tracking-widest mb-2">Backend & Cloud</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">C# / .NET</span>
+                        <span class="skill-badge">Golang</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">Azure DevOps</span>
+                    </div>
                 </div>
-                <div class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-secondary/5 transition-colors">
-                    <span class="text-2xl font-display font-black text-secondary">420</span>
-                    <p class="text-[10px] text-white/40 uppercase tracking-widest mt-1">Pull Requests</p>
+                <div>
+                    <p class="text-[10px] font-black text-white/30 uppercase tracking-widest mb-2">Frontend & Mobile</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Angular</span>
+                        <span class="skill-badge">Vue.js</span>
+                        <span class="skill-badge">Flutter</span>
+                        <span class="skill-badge">React Native</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Abstract background icon -->
-            <i data-lucide="git-merge" class="absolute -right-6 -bottom-6 w-32 h-32 text-white/5 -rotate-12 group-hover:rotate-0 transition-transform duration-700"></i>
+        </section>
+
+        <!-- Skills / Architecture -->
+        <section class="lg:col-span-2 md:col-span-2 glass-card rounded-custom p-8 bg-gradient-to-br from-primary/10 to-transparent">
+            <h3 class="font-display text-xl font-bold mb-4">Architecture</h3>
+            <ul class="space-y-3 text-sm text-white/70">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-accent"></i> DDD & CQRS</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-accent"></i> System Design</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-accent"></i> Microservices</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-accent"></i> SOLID Patterns</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="lg:col-span-2 md:col-span-2 glass-card rounded-custom p-8">
+            <h3 class="font-display text-xl font-bold mb-4">Formação</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="text-xs font-bold text-white/90">Bacharel em Ciência da Computação</p>
+                    <p class="text-[10px] text-white/40">Concluído - 2025</p>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-white/90 italic">PÓS: Engenharia de Dados com IA</p>
+                    <p class="text-[10px] text-white/40 italic">XP Educação - Em andamento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Observability Stats -->
+        <section class="lg:col-span-2 md:col-span-2 glass-card rounded-custom p-8 relative">
+            <h3 class="font-display text-xl font-bold mb-4">Observabilidade</h3>
+            <div class="flex items-end gap-2 mb-4">
+                <span class="text-4xl font-black font-display text-secondary">100%</span>
+                <span class="text-[10px] text-white/40 mb-1">UPTIME DESIGN</span>
+            </div>
+            <div class="flex gap-2">
+                <i data-lucide="activity" class="w-5 h-5 text-primary"></i>
+                <i data-lucide="gauge" class="w-5 h-5 text-secondary"></i>
+                <i data-lucide="database" class="w-5 h-5 text-accent"></i>
+            </div>
+            <p class="text-[9px] text-white/30 absolute bottom-8">Grafana | Prometheus | OpenTelemetry</p>
         </section>
 
     </main>
+
+    <footer class="mt-12 text-white/20 text-[10px] font-bold uppercase tracking-[0.3em]">
+        &copy; 2026 Danielson Sousa // Built with Antigravity AI
+    </footer>
 
     <script>
       lucide.createIcons();
